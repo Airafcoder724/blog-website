@@ -78,8 +78,12 @@ app.get("/home/:title", function (req, res) {
 })
 
 
+let port = 3000
 
+if (process.env.PORT) {
+  port = process.env.PORT
+}
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Server started on port 3000");
 });
