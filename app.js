@@ -27,9 +27,9 @@ app.get('/home', function (req, res) {
 })
 
 
-app.get('/', function (req, res) {
-  res.render('header.ejs')
-})
+// app.get('/', function (req, res) {
+//   res.render('header.ejs')
+// })
 
 app.get('/about', function (req, res) {
   res.render('about.ejs', { aboutString: aboutContent })
@@ -75,6 +75,10 @@ app.get("/home/:title", function (req, res) {
   }
 
   res.render("post.ejs")
+})
+
+app.get("/",(req,res)=>{
+  res.redirect("/home")
 })
 
 
